@@ -1,0 +1,318 @@
+[奈良美智2index.html](https://github.com/user-attachments/files/24184399/2index.html)
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>奈良美智 嘉義展 代購服務</title>
+    <style>
+        /* CSS Reset & 基本設定 */
+        :root {
+            /* 主色系：低飽和度、柔和的日系色彩 */
+            --color-primary-blue: #a3c4db; /* 柔和淺藍 */
+            --color-secondary-brown: #bfa89e; /* 柔和淺咖/米色調 */
+            --color-text-dark: #333333; /* 主要文字色 */
+            --color-text-light: #5a5a5a; /* 次要文字色 */
+            --color-background-light: #f9f9f9; /* 淺背景色 */
+            --color-accent-cta: #e6a77d; /* 醒目行動呼籲色 (偏暖橘) */
+            --color-warning: #db7d7d; /* 警告色 */
+
+            /* 內距與間距 */
+            --spacing-base: 1rem;
+            --spacing-large: 1.5rem;
+            --spacing-xl: 2rem;
+
+            /* 字體設定 */
+            --font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+
+        /* 全域樣式 - 確保手機閱讀舒適 */
+        body {
+            font-family: var(--font-family-base);
+            color: var(--color-text-dark);
+            background-color: var(--color-background-light);
+            margin: 0;
+            padding: 0;
+            line-height: 1.8; /* 增加行高，提升閱讀性 */
+        }
+
+        /* 內容容器 - 限制寬度並置中，手機版全寬 */
+        .container {
+            max-width: 600px; /* 模擬手機或單欄閱讀體驗 */
+            margin: 0 auto;
+            padding: 0 var(--spacing-base);
+        }
+
+        /* 標題與版面風格 */
+        header {
+            background-color: var(--color-primary-blue);
+            color: white;
+            padding: var(--spacing-xl) var(--spacing-base);
+            text-align: center;
+            margin-bottom: var(--spacing-xl);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.1em; /* 日系文青風格：略寬字距 */
+            font-weight: 500;
+        }
+
+        .tagline {
+            font-size: 1rem;
+            opacity: 0.85;
+            letter-spacing: 0.05em;
+        }
+
+        /* 區塊標題 */
+        .section-title {
+            font-size: 1.4rem;
+            color: var(--color-secondary-brown);
+            border-bottom: 2px solid var(--color-secondary-brown);
+            display: inline-block;
+            padding-bottom: 0.3rem;
+            margin-top: var(--spacing-xl);
+            margin-bottom: var(--spacing-large);
+            font-weight: 600;
+            letter-spacing: 0.05em;
+        }
+
+        /* 內容區塊 */
+        section {
+            padding: var(--spacing-base) 0;
+        }
+
+        /* 資訊卡片/區塊 */
+        .info-card {
+            background-color: white;
+            padding: var(--spacing-large);
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            margin-bottom: var(--spacing-large);
+            border-left: 5px solid var(--color-primary-blue);
+        }
+
+        /* 流程步驟列表 */
+        .process-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .process-item {
+            display: flex;
+            margin-bottom: var(--spacing-large);
+            align-items: flex-start;
+        }
+
+        .process-number {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: white;
+            background-color: var(--color-secondary-brown);
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            min-width: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: var(--spacing-base);
+        }
+
+        .process-text {
+            flex-grow: 1;
+        }
+
+        .process-text p {
+            margin-top: 0.2rem;
+            margin-bottom: 0;
+            font-size: 0.95rem;
+            color: var(--color-text-light);
+        }
+
+        /* 警告/注意區塊 */
+        .attention-box {
+            background-color: #fffbe6; /* 偏米黃的警告底色 */
+            border: 1px solid var(--color-warning);
+            padding: var(--spacing-base);
+            border-radius: 8px;
+            margin-top: var(--spacing-large);
+            font-size: 0.95rem;
+        }
+        
+        .attention-box strong {
+            color: var(--color-warning);
+            margin-right: 0.5rem;
+        }
+
+        /* 行動呼籲按鈕 (CTA) */
+        .cta-container {
+            position: sticky;
+            bottom: 0;
+            padding: var(--spacing-base);
+            background-color: var(--color-background-light);
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+            z-index: 10;
+        }
+
+        .cta-button {
+            display: block;
+            width: 100%;
+            padding: 1rem;
+            background-color: var(--color-accent-cta);
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1.15rem;
+            font-weight: bold;
+            border-radius: 30px; /* 大圓角按鈕 */
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 6px rgba(230, 167, 125, 0.4);
+            letter-spacing: 0.1em;
+        }
+
+        .cta-button:hover {
+            background-color: #d8966c; /* 較深的暖橘 */
+        }
+        
+        /* 頁腳 */
+        footer {
+            text-align: center;
+            padding: var(--spacing-xl) 0;
+            font-size: 0.85rem;
+            color: var(--color-text-light);
+            margin-top: var(--spacing-xl);
+        }
+        
+        /* 表單細節強調 */
+        ul {
+            padding-left: 1.5rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: var(--color-secondary-brown);
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>奈良美智 嘉義展 代購服務</h1>
+        <div class="tagline">每週前往一次</div>
+    </header>
+
+    <div class="container">
+
+        <section>
+            <h2 class="section-title">☁️ 服務說明</h2>
+            <div class="info-card">
+                <p>
+                    因自己想購買的商品缺貨，預計每週會前往一次。
+                    <br>
+                    順便幫有需要的人代購。                     <br>
+                    大致上什麼都可以代購，較大型或特殊需求請先詢問。
+                </p>
+                <p style="font-size:0.9rem; color: var(--color-text-light);">
+                    <em>* 當週訂購數量少於 5 項，則改為次週前往。</em>
+                    <br>
+                    <em>* 此代購服務會於購買到本人需要商品，或委託人數減少即結束。</em>
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">💰 收費與出貨</h2>
+            <div class="info-card">
+                <p><strong>代購服務費：（須先收訂金10%）</strong></p>
+                <p class="highlight">每樣商品 <strong style="font-size:1.1em;">+50 元</strong>                     <br> 公仔/玻璃杯/蠟燭（較大型的） <strong style="font-size:1.1em;">+100元</strong></p>
+
+                <p style="margin-top: var(--spacing-base);"><strong>出貨方式：</strong></p>
+                <ul>
+                    <li>全家</li>
+                    <li>郵局</li>
+                </ul>
+
+                <div class="attention-box">
+                    <strong>⚠️ 海報類商品：</strong>
+                    <br>
+                    以郵局出貨為主，確保商品完整性。
+                    <br>
+                    購買數量多者則改用宅配，運費另計。
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">🛒 代購流程</h2>
+            <ul class="process-list">
+                <li class="process-item">
+                    <div class="process-number">1</div>
+                    <div class="process-text">
+                        <strong>自行尋找商品圖片</strong>
+                        <p>官網或社群平台尋找商品圖片與價格。（官網商品不一定齊全，可參考他人分享）</p>
+                    </div>
+                </li>
+                <li class="process-item">
+                    <div class="process-number">2</div>
+                    <div class="process-text">
+                        <strong>加入 LINE</strong>
+                        <p>點擊下方按鈕加入 LINE，傳送商品圖片與欲購買數量。</p>
+                    </div>
+                </li>
+                <li class="process-item">
+                    <div class="process-number">3</div>
+                    <div class="process-text">
+                        <strong>確認購買商品及金額</strong>
+                        <p>我會回覆總金額、運費與確認出貨方式。確認沒問題後支付訂金即委托成功。</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 class="section-title">📝 你需要準備</h2>
+            <div class="info-card">
+                <p style="font-weight: bold; margin-bottom: 0.5rem;">務必提供以下資訊：</p>
+                <ul>
+                    <li><span class="highlight">商品照片</span>請直接在照片上標註尺寸與購買數量</li>
+                    <li><span class="highlight">商品價格</span>請自行查詢原價</li>
+                    <li><span class="highlight">缺貨時處理方式</span>
+                        <p style="font-size:0.9rem; margin: 0.2rem 0;">例如：A 缺貨可換 B／缺貨則取消</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section style="margin-bottom: 80px;"> <h2 class="section-title">📢 注意事項</h2>
+            <div class="info-card">
+                <ul>
+                    <li>庫存以現場為準，<span class="highlight">無法保證一定購得</span>。</li>
+                    <li>代購商品不拆封檢查，重大瑕疵請洽官方。</li>
+                    <li>代購商品<span class="highlight">不接受退換貨</span>。</li>
+                </ul>
+            </div>
+        </section>
+
+    </div>
+
+    <div class="cta-container">
+        <a href="https://lin.ee/vBk0ejH" target="_blank" class="cta-button">
+            ✨ 加入 LINE 委託代購
+        </a>
+    </div>
+
+    <footer>
+        <p>奈良美智 嘉義展 代購服務（隨時結束服務）</p>
+    </footer>
+
+</body>
+</html>
+
